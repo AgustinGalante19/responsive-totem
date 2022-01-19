@@ -1,0 +1,316 @@
+/* #1167B1 */
+html {
+  height: 100%;
+}
+
+.txt-temp {
+  font-size: 70pt;
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-desc {
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-minmax {
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-hum {
+  color: white;
+  text-align: center;
+}
+
+.container-tiempo {
+  min-height: 25vh;
+  background-image: url("../img/bg_naranja.jpg");
+  animation: nav-load 300ms ease-out;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+  background-image: url("../img/bg_index.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#hora-navbar {
+  color: white;
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+nav {
+  animation: nav-load 300ms ease-out;
+}
+
+.carta {
+  position: sticky;
+  max-width: 286px;
+  background-color: #E4E4E4;
+  color: rgba(156, 156, 156, 0.4) !important;
+  border: 1px solid #262c37;
+  transition: transform .2s;
+  margin: 10px 20px;
+}
+
+.carta-imagen {
+  width: 100%;
+  height: 9vw;
+  object-fit: cover;
+}
+
+.carta:hover {
+  color: black !important;
+  transition: 0.5s;
+  transform: scale(1.06);
+  background-color: white;
+}
+
+.carta-cuerpo {
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.animation {
+  animation: nav-load 700ms ease-in-out;
+}
+
+.container-tiempo-extendido {
+  min-height: 100%;
+  margin: auto;
+  height: 100%;
+  margin-top: 70px;
+  animation: forecast-load 700ms ease-out;
+}
+
+.carta-dia-tiempo {
+  width: 100%;
+  height: 100%;
+  min-width: 15rem;
+  background-image: url("../img/bg_cardtiempo.png");
+  background-position: center;
+  color: white !important;
+  transition: transform .2s;
+  animation: card-load 400ms ease-in;
+}
+
+.carta-dia-tiempo:hover {
+  transition: 0.5s;
+  transform: scale(1.06);
+}
+
+.icon-tiempo {
+  font-size: 20pt;
+}
+
+.lineanashe {
+  background-color: white;
+  height: 1px;
+}
+
+.txt-fecha {
+  margin-top: 5px;
+}
+
+.txt-estado {
+  font-weight: bold;
+}
+
+
+
+
+
+.boton-carta {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4) !important;
+  background-color: #0F497C;
+  letter-spacing: 2px;
+  font-size: 16px;
+  transition: 0.5s;
+  margin: 10px 5px;
+  font-weight: 400;
+}
+
+.boton-carta:hover {
+  background-color: #1167B1;
+  color: white !important;
+}
+
+.boton-carta span {
+  display: block;
+  position: absolute;
+  background-color: #FFAC33;
+  min-width: 2px;
+  min-height: 2px;
+}
+
+.boton-carta span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.boton-carta:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.boton-carta span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.boton-carta:hover span:nth-child(2) {
+  transform: scaleY(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.boton-carta span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.boton-carta:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.boton-carta span:nth-child(4) {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.boton-carta:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.main-footer {
+  background-color: #1167B1;
+  padding: 0.5em;
+  margin-bottom: 0;
+  animation: footer-load 300ms ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+
+.navbar {
+  background-color: #1167B1;
+}
+
+.main-footer h6 {
+  color: white;
+  text-align: center;
+}
+
+
+
+.animation-temp {
+  animation: tiempo 400ms ease-out;
+}
+
+@keyframes tiempo {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes footer-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes forecast-load {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
