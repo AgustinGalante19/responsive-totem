@@ -1,10 +1,10 @@
 import React from 'react';
 import { WiHumidity } from "react-icons/wi";
-
 //components
-import ForecastItem from '../components/ForecastItem';
+import Forecast from '../components/Forecast';
 import TiempoItem from '../components/TiempoItem';
-import Loader from '../components/Loader'
+import Loader from '../components/Loader';
+
 import Loader2 from '../img/svg/loader2.svg';
 
 class Tiempo extends React.Component {
@@ -12,18 +12,19 @@ class Tiempo extends React.Component {
     state = {
         loading: true,
         tiempoHoy: null,
+        tiempoExt: null,
     }
 
     async componentDidMount() {
+        document.title = "Tiempo"
         const response = await fetch(process.env.REACT_APP_TIEMPO_HOY_API);
-        const data = await response.json();
+        const today = await response.json();
 
         const reqres = await fetch(process.env.REACT_APP_TIEMPO_EXT_API);
-        const result = await reqres.json();
+        const extendido = await reqres.json();
 
-        this.setState({ tiempoHoy: data, tiempoExt: result, loading: false });
+        this.setState({ tiempoHoy: today, tiempoExt: extendido.data, loading: false });
     }
-
     render() {
         return (
             <div>
@@ -34,7 +35,7 @@ class Tiempo extends React.Component {
                 `}</style>
                 {this.state.loading || !this.state.tiempoHoy ? (
                     <div>
-                        <style>{".content-wrap { background-image: none !important;}"}</style>
+                        <style>{".content-wrap { background-image: none !important; background-color: #D7D7D7}"}</style>
                         <div className="container-fluid container-tiempo" style={{ minHeight: "25vh" }}>
                             <div className="row justify-content-center">
                                 <div className="row" style={{ opacity: "0%" }}>
@@ -57,79 +58,24 @@ class Tiempo extends React.Component {
                     </div>
                 ) : (
                     <div>
-                        <style>{".content-wrap { background-image: none !important; flex: 1;}"}</style>
+                        <style>{".content-wrap { background-image: none !important;background-color: #D7D7D7}"}</style>
                         <div className="container-fluid container-tiempo">
                             <TiempoItem
                                 icon={this.state.tiempoHoy.sky.icon}
                                 temperature={this.state.tiempoHoy.temperature}
                                 min={this.state.tiempoHoy.temp_min}
-                                max={this.state.tiempoHoy.temp_ax}
+                                max={this.state.tiempoHoy.temp_max}
                                 state={this.state.tiempoHoy.sky.state}
                                 humidity={this.state.tiempoHoy.humidity}
                             />
                         </div>
-                        <div className="container-fluid container-tiempo-extendido">
-                            <div className="row align-items-center">
-                                <div className="col align-self-center">
-                                    <ForecastItem
-                                        dia={this.state.tiempoExt.data[0].day}
-                                        fecha={this.state.tiempoExt.data[0].date}
-                                        min={this.state.tiempoExt.data[0].temp_min}
-                                        max={this.state.tiempoExt.data[0].temp_max}
-                                        icon_code={this.state.tiempoExt.data[0].sky.icon}
-                                        sky={this.state.tiempoExt.data[0].sky.state}
-                                        humidity={this.state.tiempoExt.data[0].humidity}
-                                    />
-                                </div>
-                                <div className="col align-self-center">
-                                    <ForecastItem
-                                        dia={this.state.tiempoExt.data[1].day}
-                                        fecha={this.state.tiempoExt.data[1].date}
-                                        min={this.state.tiempoExt.data[1].temp_min}
-                                        max={this.state.tiempoExt.data[1].temp_max}
-                                        icon_code={this.state.tiempoExt.data[1].sky.icon}
-                                        sky={this.state.tiempoExt.data[1].sky.state}
-                                        humidity={this.state.tiempoExt.data[1].humidity}
-                                    />
-                                </div>
-                                <div className="col align-self-center">
-                                    <ForecastItem
-                                        dia={this.state.tiempoExt.data[2].day}
-                                        fecha={this.state.tiempoExt.data[2].date}
-                                        min={this.state.tiempoExt.data[2].temp_min}
-                                        max={this.state.tiempoExt.data[2].temp_max}
-                                        icon_code={this.state.tiempoExt.data[2].sky.icon}
-                                        sky={this.state.tiempoExt.data[2].sky.state}
-                                        humidity={this.state.tiempoExt.data[2].humidity}
-                                    />
-                                </div>
-                                <div className="col align-self-center">
-                                    <ForecastItem
-                                        dia={this.state.tiempoExt.data[3].day}
-                                        fecha={this.state.tiempoExt.data[3].date}
-                                        min={this.state.tiempoExt.data[3].temp_min}
-                                        max={this.state.tiempoExt.data[3].temp_max}
-                                        icon_code={this.state.tiempoExt.data[3].sky.icon}
-                                        sky={this.state.tiempoExt.data[3].sky.state}
-                                        humidity={this.state.tiempoExt.data[3].humidity}
-                                    />
-                                </div>
-                                <div className="col align-self-center">
-                                    <ForecastItem
-                                        dia={this.state.tiempoExt.data[4].day}
-                                        fecha={this.state.tiempoExt.data[4].date}
-                                        min={this.state.tiempoExt.data[4].temp_min}
-                                        max={this.state.tiempoExt.data[4].temp_max}
-                                        icon_code={this.state.tiempoExt.data[4].sky.icon}
-                                        sky={this.state.tiempoExt.data[4].sky.state}
-                                        humidity={this.state.tiempoExt.data[4].humidity}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            console.log(this.state.tiempoExt)
+
+                        }
+                        <Forecast forecast={this.state.tiempoExt} />
                     </div>
                 )
-
                 }
             </div>
         )

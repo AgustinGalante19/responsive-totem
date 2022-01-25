@@ -27,7 +27,7 @@ function Menu() {
     });
 
     return (
-        <div className="container animation">
+        <div className="container menu-an">
             <div className="row">
                 <div className="col-md">
                     <MenuItem image={cardTiempo} title={"Temperatura: " + temperature} description="Tiempo extendido." url="/tiempo" />

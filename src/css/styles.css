@@ -86,9 +86,12 @@ nav {
   margin: 10px;
 }
 
-
 .animation {
   animation: nav-load 700ms ease-in-out;
+}
+
+.menu-an {
+  animation: menu-load 400ms ease-out;
 }
 
 .container-tiempo-extendido {
@@ -266,7 +269,15 @@ nav {
 }
 
 
+@keyframes menu-load {
+  0% {
+    transform: translateY(-100px);
+  }
 
+  100% {
+    transform: translateY(0);
+  }
+}
 
 
 @keyframes nav-load {
