@@ -42,7 +42,6 @@ class Tiempo extends React.Component {
                                     <img src={null} alt="tiempo" style={{ height: "50px" }} />
                                     <h2 className="txt-temp">°C</h2>
                                     <p className="txt-temp-minmax">{`min:°C max:°C`}</p>
-                                    <h4 className="txt-temp-desc"></h4>
                                     <WiHumidity className="txt-temp-hum" style={{ height: "30px" }} />
                                     <p className="txt-temp-hum" style={{ fontWeight: "bold" }}>Humedad</p>
                                     <p className="txt-temp-hum" style={{ fontWeight: "normal" }}>%</p>
