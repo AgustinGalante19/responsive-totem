@@ -68,10 +68,6 @@ class Tiempo extends React.Component {
                                 humidity={this.state.tiempoHoy.humidity}
                             />
                         </div>
-                        {
-                            console.log(this.state.tiempoExt)
-
-                        }
                         <Forecast forecast={this.state.tiempoExt} />
                     </div>
                 )
