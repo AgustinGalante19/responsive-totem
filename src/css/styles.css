@@ -1,33 +1,8 @@
 /* #1167B1 */
+
+/* Estilos principales*/
 html {
   height: 100%;
-}
-
-.txt-temp {
-  font-size: 70pt;
-  color: white;
-  text-align: center;
-}
-
-.txt-temp-desc {
-  color: white;
-  text-align: center;
-}
-
-.txt-temp-minmax {
-  color: white;
-  text-align: center;
-}
-
-.txt-temp-hum {
-  color: white;
-  text-align: center;
-}
-
-.container-tiempo {
-  min-height: 25vh;
-  background-image: url("../img/bg_naranja.jpg");
-  animation: nav-load 300ms ease-out;
 }
 
 .page-container {
@@ -45,6 +20,19 @@ html {
   background-attachment: fixed;
 }
 
+.animation {
+  animation: nav-load 700ms ease-in-out;
+}
+
+/* Estilos navbar */
+nav {
+  animation: nav-load 300ms ease-out;
+}
+
+.navbar {
+  background-color: #1167B1;
+}
+
 #hora-navbar {
   color: white;
   padding: 5px;
@@ -54,10 +42,7 @@ html {
   margin-top: 5px;
 }
 
-nav {
-  animation: nav-load 300ms ease-out;
-}
-
+/* Estilos menú principal */
 .carta {
   position: sticky;
   max-width: 286px;
@@ -83,62 +68,34 @@ nav {
 
 .carta-cuerpo {
   padding: 10px;
-  margin: 10px;
-}
-
-.animation {
-  animation: nav-load 700ms ease-in-out;
 }
 
 .menu-an {
   animation: menu-load 400ms ease-out;
 }
 
-.container-tiempo-extendido {
-  min-height: 100%;
-  margin: auto;
-  height: 100%;
-  margin-top: 70px;
-  animation: forecast-load 700ms ease-out;
+
+/* ESTILOS CARTA NEGOCIOS */
+.contenedor-negocios {
+  padding: 10px;
+  background-color: #ffff;
 }
 
-.carta-dia-tiempo {
-  width: 100%;
-  height: 100%;
-  min-width: 15rem;
-  background-image: url("../img/bg_cardtiempo.png");
-  background-position: center;
-  color: white !important;
+.carta-negocio {
+  margin: 10px 5px;
+  color: white;
+  background-color: #1167B1;
   transition: transform .2s;
-  animation: card-load 400ms ease-in;
+  animation: negocio-load 430ms ease-in-out;
+  max-height: 20vh;
 }
 
-.carta-dia-tiempo:hover {
+.carta-negocio:hover {
   transition: 0.5s;
-  transform: scale(1.06);
+  transform: scale(1.01);
 }
 
-.icon-tiempo {
-  font-size: 20pt;
-}
-
-.lineanashe {
-  background-color: white;
-  height: 1px;
-}
-
-.txt-fecha {
-  margin-top: 5px;
-}
-
-.txt-estado {
-  font-weight: bold;
-}
-
-
-
-
-
+/* Estilos boton animado en menú */
 .boton-carta {
   position: relative;
   display: inline-block;
@@ -232,6 +189,7 @@ nav {
   transition: transform 0.5s;
 }
 
+/* Estilos footer */
 .main-footer {
   background-color: #1167B1;
   padding: 0.5em;
@@ -242,18 +200,97 @@ nav {
   opacity: 0;
 }
 
-
-.navbar {
-  background-color: #1167B1;
-}
-
 .main-footer h6 {
   color: white;
   text-align: center;
 }
 
+/* Estilos Tiempo/Tiempo extendido */
+.txt-temp {
+  font-size: 70pt;
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-desc {
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-minmax {
+  color: white;
+  text-align: center;
+}
+
+.txt-temp-hum {
+  color: white;
+  text-align: center;
+}
+
+.container-tiempo {
+  min-height: 25vh;
+  background-image: url("../img/bg_naranja.jpg");
+  animation: nav-load 300ms ease-out;
+}
+
+.container-tiempo-extendido {
+  min-height: 100%;
+  margin: auto;
+  height: 100%;
+  margin-top: 70px;
+  animation: forecast-load 700ms ease-out;
+}
+
+.carta-dia-tiempo {
+  width: 100%;
+  height: 100%;
+  min-width: 15rem;
+  background-image: url("../img/bg_cardtiempo.png");
+  background-position: center;
+  color: white !important;
+  transition: transform .2s;
+  animation: card-load 400ms ease-in;
+}
+
+.carta-dia-tiempo:hover {
+  transition: 0.5s;
+  transform: scale(1.06);
+}
+
+.icon-tiempo {
+  font-size: 20pt;
+}
+
+.lineanashe {
+  background-color: white;
+  height: 1px;
+}
+
+.txt-fecha {
+  margin-top: 5px;
+}
+
+.txt-estado {
+  font-weight: bold;
+}
 
 
+/* Custom loader estilos.*/
+.contenedor-loader {
+  background-color: white;
+  min-height: 81.7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-loader {
+  animation: logo-spin infinite 0.3s linear;
+}
+
+
+/* Animaciones */
 .animation-temp {
   animation: tiempo 400ms ease-out;
 }
@@ -324,4 +361,47 @@ nav {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+
+@keyframes negocio-load {
+  0% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: 12vw;
+  object-fit: cover;
+}
+
+.carta-alt {
+  min-width: 80%;
+  transition: transform .2s;
+  animation: negocio-load 430ms ease-in-out;
+}
+
+.cuerpo-negocio {
+  color: white;
+  background-color: #1167B1;
+}
+
+.carta-alt:hover {
+  transition: 0.5s;
+  transform: scale(1.01);
 }

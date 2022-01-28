@@ -1,8 +1,7 @@
+import React, { Component } from 'react';
 import { WiHumidity, WiThermometer } from "react-icons/wi";
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { v4 as uuidv4 } from 'uuid';
-
-import React, { Component } from 'react';
 
 
 export default class Forecast extends Component {

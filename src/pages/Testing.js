@@ -1,7 +1,12 @@
 import React from 'react';
+import CustomLoader from '../components/CustomLoader';
+
+
 
 function Testing() {
-    return <div></div>;
+    return (
+        <CustomLoader />
+    )
 }
 
 export default Testing;

@@ -12,6 +12,10 @@ import Footer from './components/Footer';
 //pages imports
 import Tiempo from './pages/Tiempo';
 import EstacionesDeServicio from './pages/EstacionesDeServicio';
+import Restaurantes from './pages/Restaurantes';
+import Farmacias from './pages/Farmacias';
+import Hoteles from './pages/Hoteles';
+
 
 import Testing from './pages/Testing';
 
@@ -26,7 +30,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Menu />} />
             <Route path="/tiempo" element={<Tiempo />} />
-            <Route path="/estaciones-de-servicio" element={<EstacionesDeServicio />}/>
+            <Route path="/estaciones-de-servicio" element={<EstacionesDeServicio />} />
+            <Route path="/farmacias" element={<Farmacias />} />
+            <Route path="/restaurantes" element={<Restaurantes />} />
+            <Route path="/hoteles" element={<Hoteles />} />
             <Route path="*" element={<h3>404 not found</h3>} />
             <Route path="/test" element={<Testing />} />
           </Routes>
