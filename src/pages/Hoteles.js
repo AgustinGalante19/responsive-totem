@@ -10,7 +10,7 @@ class Hoteles extends Component {
     }
 
     async componentDidMount() {
-        const reqres = await fetch(keys.REACT_APP_HOTELES_API);
+        const reqres = await fetch("http://localhost:5000/api/hoteles");
         const hoteles = await reqres.json();
 
         this.setState({ negocio: hoteles, loading: false });

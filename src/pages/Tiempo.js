@@ -20,10 +20,10 @@ class Tiempo extends React.Component {
 
     async componentDidMount() {
         document.title = "Tiempo"
-        const response = await fetch(keys.REACT_APP_TIEMPO_HOY_API);
+        const response = await fetch("http://localhost:5000/api/tiempo");
         const today = await response.json();
 
-        const reqres = await fetch(keys.REACT_APP_TIEMPO_EXT_API);
+        const reqres = await fetch("http://localhost:5000/api/tiempo/extendido");
         const extendido = await reqres.json();
         this.setState({ tiempoExt: extendido, tiempoHoy: today, loading: false })
 

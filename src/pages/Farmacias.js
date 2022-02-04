@@ -12,7 +12,7 @@ class Farmacias extends Component {
 
     async componentDidMount() {
         /* const reqres = await fetch(process.env.REACT_APP_FARMACIAS_API); */
-        const reqres = await fetch(keys.REACT_APP_FARMACIAS_API);
+        const reqres = await fetch("http://localhost:5000/api/farmacias");
         const farmacias = await reqres.json();
 
         this.setState({ loading: false, negocio: farmacias });

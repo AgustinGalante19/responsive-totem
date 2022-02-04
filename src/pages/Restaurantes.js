@@ -10,7 +10,7 @@ class Restaurantes extends Component {
     }
 
     async componentDidMount() {
-        const reqres = await fetch(keys.REACT_APP_RESTAURANTES_API);
+        const reqres = await fetch("http://localhost:5000/api/restaurantes");
         const farmacias = await reqres.json();
 
         this.setState({ negocio: farmacias, loading: false })
