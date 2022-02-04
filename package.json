@@ -1,8 +1,11 @@
 {
   "name": "responsive-totem",
-  "version": "0.1.4",
+  "version": "0.1",
+  "homepage": "/",
   "private": true,
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.13.2",
+    "@react-google-maps/api": "^2.7.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

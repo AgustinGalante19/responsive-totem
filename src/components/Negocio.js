@@ -31,20 +31,3 @@ export default class Negocio extends Component {
         )
     }
 }
-
-/*
-<div className="carta-negocio" key={uuidv4()}>
-                            <div className="row">
-                                <div className="col-md-3">
-                                    <img className='img-fluid rounded-start' src={e.img}
-                                        alt="..." />
-                                </div>
-                                <div className="col" style={{ padding: "5px" }}>
-                                    <h2>{e.name}</h2>
-                                    <h6><BiMap />e{e.address}</h6>
-                                    <h6><AiOutlinePhone />{e.phone}</h6>
-                                    <h6><AiOutlineCalendar />24hs</h6>
-                                </div>
-                            </div>
-                        </div>
-*/

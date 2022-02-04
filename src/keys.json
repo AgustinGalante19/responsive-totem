@@ -1,0 +1,9 @@
+{
+    "REACT_APP_TIEMPO_HOY_API": "http://localhost:5000/api/tiempo",
+    "REACT_APP_TIEMPO_EXT_API": "http://localhost:5000/api/tiempo/extendido",
+    "REACT_APP_ESTACIONES_API": "http://localhost:5000/api/estaciones-de-servicio",
+    "REACT_APP_FARMACIAS_API": "http://localhost:5000/api/farmacias",
+    "REACT_APP_RESTAURANTES_API": "http://localhost:5000/api/restaurantes",
+    "REACT_APP_HOTELES_API": "http://localhost:5000/api/hoteles",
+    "REACT_APP_MAPS_KEY": "AIzaSyBH3UJYBjdWqib5Z7XDeSorJTmYSKdGACs"
+}

@@ -11,8 +11,6 @@ import cardRest from '../img/cardRest.jpg';
 import cardHotel from '../img/cardHotel.jpg';
 import cardEstacion from '../img/cardEstacion.jpg';
 
-
-
 function Menu() {
 
     const [temperature, setTemperature] = useState([]);

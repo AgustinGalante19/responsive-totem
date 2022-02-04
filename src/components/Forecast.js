@@ -5,10 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 export default class Forecast extends Component {
+
     render() {
         return <div className="container-fluid container-tiempo-extendido">
             <div className="row align-items-center">
-                {this.props.forecast.map(e =>
+                {this.props.extendido.map(e =>
                     <div className="col align-self-center" key={uuidv4()}>
                         <div className="carta-dia-tiempo" key={e.day}>
                             <h3 className="text-center">{e.day}</h3>
@@ -28,7 +29,8 @@ export default class Forecast extends Component {
                             </p>
                         </div>
                     </div>
-                )}
+                )
+                }
             </div>
         </div>
     }

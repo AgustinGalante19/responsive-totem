@@ -2,7 +2,17 @@
 
 /* Estilos principales*/
 html {
-  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container-map {
+/*     box-sizing: initial; */
 }
 
 .page-container {

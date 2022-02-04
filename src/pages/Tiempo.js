@@ -6,6 +6,9 @@ import TiempoItem from '../components/TiempoItem';
 import Loader from '../components/Loader';
 
 import Loader2 from '../img/svg/loader2.svg';
+import keys from '../keys.json';
+
+
 
 class Tiempo extends React.Component {
 
@@ -17,13 +20,13 @@ class Tiempo extends React.Component {
 
     async componentDidMount() {
         document.title = "Tiempo"
-        const response = await fetch(process.env.REACT_APP_TIEMPO_HOY_API);
+        const response = await fetch(keys.REACT_APP_TIEMPO_HOY_API);
         const today = await response.json();
 
-        const reqres = await fetch(process.env.REACT_APP_TIEMPO_EXT_API);
+        const reqres = await fetch(keys.REACT_APP_TIEMPO_EXT_API);
         const extendido = await reqres.json();
+        this.setState({ tiempoExt: extendido, tiempoHoy: today, loading: false })
 
-        this.setState({ tiempoHoy: today, tiempoExt: extendido.data, loading: false });
     }
     render() {
         return (
@@ -34,6 +37,7 @@ class Tiempo extends React.Component {
                     } 
                 `}</style>
                 {this.state.loading || !this.state.tiempoHoy ? (
+
                     <div>
                         <style>{".content-wrap { background-image: none !important; background-color: #D7D7D7}"}</style>
                         <div className="container-fluid container-tiempo" style={{ minHeight: "25vh" }}>
@@ -68,7 +72,7 @@ class Tiempo extends React.Component {
                                 humidity={this.state.tiempoHoy.humidity}
                             />
                         </div>
-                        <Forecast forecast={this.state.tiempoExt} />
+                        <Forecast extendido={this.state.tiempoExt.data} />
                     </div>
                 )
                 }

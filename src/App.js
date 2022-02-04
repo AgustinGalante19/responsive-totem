@@ -15,7 +15,7 @@ import EstacionesDeServicio from './pages/EstacionesDeServicio';
 import Restaurantes from './pages/Restaurantes';
 import Farmacias from './pages/Farmacias';
 import Hoteles from './pages/Hoteles';
-
+import Mapa from './pages/Mapa';
 
 import Testing from './pages/Testing';
 
@@ -23,7 +23,6 @@ function App() {
 
   return (
     <div className="page-container">
-
       <div className="content-wrap">
         <BrowserRouter>
           <Navigation />
@@ -34,6 +33,7 @@ function App() {
             <Route path="/farmacias" element={<Farmacias />} />
             <Route path="/restaurantes" element={<Restaurantes />} />
             <Route path="/hoteles" element={<Hoteles />} />
+            <Route path="/mapa" element={<Mapa />} />
             <Route path="*" element={<h3>404 not found</h3>} />
             <Route path="/test" element={<Testing />} />
           </Routes>
