@@ -16,7 +16,7 @@ function Menu() {
     const [temperature, setTemperature] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.openweathermap.org/data/2.5/weather?lat=-33.001146355012644&lon=-58.523484474104954&appid=5ead772f5e978aba66947f30c55359f8')
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=-33.001146355012644&lon=-58.523484474104954&appid=${process.env.REACT_APP_REACT_APP_WEATHER_KEY}`)
             .then(res => res.json())
             .then(response => {
                 setTemperature(Math.round(response.main.temp - 273.15) + '°C');

@@ -15,8 +15,8 @@ export default class EstacionesDeServicio extends Component {
 
     async componentDidMount() {
 
-        /* const reqres = await fetch(process.env.REACT_APP_ESTACIONES_API); */
-        const reqres = await fetch("http://localhost:5000/api/estaciones-de-servicio");
+        const reqres = await fetch(process.env.REACT_APP_ESTACIONES_API);
+        /* const reqres = await fetch("http://localhost:5000/api/estaciones-de-servicio"); */
         const estaciones = await reqres.json();
 
         this.setState({ negocio: estaciones, loading: false });
