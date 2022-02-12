@@ -11,5 +11,5 @@
 </p>
 <img src="https://cdn.discordapp.com/attachments/843000775550042126/939224846611648562/unknown.png" width="1600px">
 <h2>¿Cómo funciona internamente?</h2>
-<p>Internamente el proyecto está conectado a una API desarrollada también por mi en TypeScript.(<a href="https://github.com/AgustinGalante19/typescript-totem-api/tree/master">Repositorio</a>)</p>
-<p>Cabe aclarar que este proyecto sigue en desarrolo con el fin de practicar y aprender.</p>
+<p>Internamente el proyecto está conectado a una API desarrollada también por mi en TypeScript.(<a href="https://github.com/AgustinGalante19/typescript-totem-api">Repositorio</a>)</p>
+<p>Cabe aclarar que este proyecto sigue en desarrollo con el fin de practicar y aprender.</p>
