@@ -9,5 +9,5 @@
 </p>
 <img src="https://cdn.discordapp.com/attachments/843000775550042126/939224846611648562/unknown.png" width="1600px">
 <h2>How does it works internally?</h2>
-<p>Internally the project is connected to an api developed by me on TypeScript.(<a href="https://github.com/AgustinGalante19/typescript-totem-api">Repositorio</a>)</p>
+<p>Internally the project is connected to an api developed by me on TypeScript.(<a href="https://github.com/AgustinGalante19/typescript-totem-api">Repository</a>)</p>
 <p>It should be noted that this project is still under development in order to practice and learn new concepts.</p>
